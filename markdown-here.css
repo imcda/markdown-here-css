@@ -10,6 +10,7 @@
 
 /* This is the overall wrapper, it should be treated as the `body` section. */
 .markdown-here-wrapper {
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "PingFang HK", "蘋方-港", "PingFang TC", "蘋方-繁", "PingFang SC", "蘋方-簡", "PingFang", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", SimSun, 宋体, STXihei, "华文细黑", sans-serif;
 }
 
 /* To add site specific rules, you can use the `data-md-url` attribute that we
@@ -20,7 +21,7 @@
 
 pre, code {
   font-size: 0.85em;
-  font-family: Consolas, Inconsolata, Courier, monospace;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, "PingFang HK", "蘋方-港", "PingFang TC", "蘋方-繁", "PingFang SC", "蘋方-簡", "PingFang", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", SimSun, 宋体, STXihei, "华文细黑", monospace;
 }
 
 code {
@@ -162,41 +163,48 @@ h6 {
   color: #777;
 }
 
+/* from https://github.com/ickc/multimarkdown-latex-css/blob/gh-pages/css-source/table/_table.scss */
+th {
+    padding: 1px;
+}
+td {
+    padding: 5px;
+}
+
 table {
-  padding: 0;
-  border-collapse: collapse;
-  border-spacing: 0;
-  font-size: 1em;
-  font: inherit;
-  border: 0;
+    border: solid black;
+    border-width: 2px 0px;
+    empty-cells: hide;
+    border-spacing: 0px;
+    padding: 2px;
+    margin: 20px auto;
 }
-
-tbody {
-  margin: 0;
-  padding: 0;
-  border: 0;
+table caption {
+    margin: 5px;
+    text-align: center;
+    caption-side: bottom;
 }
-
-table tr {
-  border: 0;
-  border-top: 1px solid #CCC;
-  background-color: white;
-  margin: 0;
-  padding: 0;
+thead th {
+    border: solid gray;
+    border-width: 0 0 2px 0;
+    padding: 5px;
 }
-
-table tr:nth-child(2n) {
-  background-color: #F8F8F8;
+thead > tr:last-child > th {
+    border-style: none;
 }
-
-table tr th, table tr td {
-  font-size: 1em;
-  border: 1px solid #CCC;
-  margin: 0;
-  padding: 0.5em 1em;
+tbody > tr:first-child > td {
+    border: solid gray;
+    border-width: 1px 0 0 0;
 }
-
-table tr th {
- font-weight: bold;
-  background-color: #F0F0F0;
+tbody > tr:first-child > th {
+    border: solid gray;
+    border-width: 1px 0 0 0;
+}
+thead + tbody > tr:first-child > td {
+    border: solid black;
+    border-width: 1px 0 0 0;
+}
+thead + tbody > tr:first-child > th {
+    border: solid black;
+    border-width: 1px 0 0 0;
 }
