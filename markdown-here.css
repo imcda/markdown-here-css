@@ -61,14 +61,11 @@ our syntax highlighting. */
   background-color: transparent;
 }
 
-/* This spacing has been tweaked to closely match Gmail+Chrome "paragraph" (two line breaks) spacing.
-Note that we only use a top margin and not a bottom margin -- this prevents the
-"blank line" look at the top of the email (issue #243).
-*/
+/* This spacing has been tweaked to closely match Gmail+Chrome "paragraph" (two line breaks) spacing. */
 p {
   /* !important is needed here because Hotmail/Outlook.com uses !important to
      kill the margin in <p>. We need this to win. */
-  margin: 0 0 1.2em 0 !important;
+  margin: 1.2em 0 !important;
 }
 
 table, pre, dl, blockquote, q, ul, ol {
@@ -93,16 +90,6 @@ li p {
 ul ul, ul ol, ol ul, ol ol {
   margin: 0;
   padding-left: 1em;
-}
-
-/* Use Roman numerals for sub-ordered-lists. (Like Github.) */
-ol ol, ul ol {
-  list-style-type: lower-roman;
-}
-
-/* Use letters for sub-sub-ordered lists. (Like Github.) */
-ul ul ol, ul ol ol, ol ul ol, ol ol ol {
-  list-style-type: lower-alpha;
 }
 
 dl {
