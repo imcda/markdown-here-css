@@ -7,7 +7,7 @@ This is my setup of <http://markdown-here.com>.
 
 # Other Settings #
 
-- Syntax Highlighting CSS: Xcode
+- Syntax Highlighting CSS: `Solarized Light`
 - TeX Mathematical Formulae Support: `<img src="https://latex.codecogs.com/png.latex?{urlmathcode}" alt="{mathcode}">`
 - Enabled `Enable automatic header anchors.`
 - Disabled `Enable GFM line breaks.`
